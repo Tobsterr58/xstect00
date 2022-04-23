@@ -241,13 +241,13 @@ h5 {
 } 
 
 #imageNizna {
-    background-image: url(/images/Nizna_school.jpg);
+    background-image: url(images/Nizna_school.jpg);
     background-size: cover;
     width: 50%;
 }
 
 #imageGMH {
-    background-image: url(/images/GMH.jpg);
+    background-image: url(images/GMH.jpg);
     background-size: cover;
     width: 50%;
 }
