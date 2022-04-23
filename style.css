@@ -1,0 +1,681 @@
+*{                                             
+        text-decoration:none;
+}
+
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@font-face {
+    font-family: justFont;
+    src: url(fonts/Rock_Salt/RockSalt-Regular.ttf);
+  }
+    
+@font-face {
+    font-family: quotesFont;
+    src: url(fonts/barcelony/Barcelony.ttf);
+  }
+body{ /* addapted to samsung galaxy A50 (My phone) smaller can not work properly*/
+    min-width: 375px;
+    max-width: none;
+    margin: auto;
+    min-height: 650px;
+}
+
+header{
+    width: 100%;
+    height: 110vh;
+    min-height: 300px;
+    margin: auto;
+    background-image: url("images/Tobiáš_black.png");
+    background-size: cover;
+}
+
+h1 {
+    margin: 0 0 0 50%;
+    padding-top: 15%;
+    font-size: 70px;
+    color: white;
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+h1 span {
+    padding-left: 20px;
+    font-family: justFont, Georgia, Times, "Times New Roman", serif;
+    font-size: 80px;
+}
+
+h2 {
+    margin: 0;
+    color: white;
+    padding: 0 0 0 50%;
+    letter-spacing: 10px;
+    font-size: 1em;
+    display: inline-block;
+}
+
+h3 {
+    height: 10vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin-top: 20px;
+    color: black;
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*///////////////////////////////// NAVIGATION //////////////////////////////////////*/
+
+.navList{
+    z-index: 100; /* to get navbar always on top*/
+    background-color: #ECEBEA;
+    width: 100%;
+	list-style: none;
+    position: fixed;
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	padding: 0;
+	margin: 0;
+    box-shadow: 0 0 10px 0 black;
+}
+
+.navList li{
+	height: 100%;
+    padding: 0;
+}
+
+.navList li > a{
+	text-decoration: none;
+	font-family: 'Roboto Slab', serif;
+	color: black;
+	letter-spacing: 0.04em;
+	border: 0.1em solid transparent;
+    border-top: none;
+    border-bottom: 0.25em solid transparent;
+	display: flex;
+	height: 100%;
+	padding: 0.8em 1.2em;
+	transition: border-color 150ms cubic-bezier(0.440, 0.090, 0.580, 0.935);
+}
+
+.navList li:hover > a{
+	border-color: black;
+}
+/*///////////////////////////////// INFO ////////////////////////////////////////////*/
+
+h5 {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 4em;
+    margin: 2% 0;
+    text-align: center;
+}
+
+
+
+#info img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#info {
+    margin-top: 20px; 
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+#info p {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 10px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.story {
+    display: flex;
+    margin: 0 0 3% 0;
+    justify-content: center;
+}
+
+.story img {
+    max-width: 20%;
+    min-width: 15%;
+    align-self: center;
+}
+
+#info p {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 5%;
+    max-width: 50%;
+    font-size: 1.4em;
+    align-self: center;
+}
+
+#quotes {
+    display: flex;
+    font-size: 2.5em;
+    font-style: italic;
+    margin: 20px 0;
+    justify-content: center;
+    font-family: quotesFont, Georgia, Times, "Times New Roman", serif;;
+}
+
+#info ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;  
+  }
+
+  #info li {
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    width: 200%;
+    animation: bannermoveL 30s linear infinite;
+  }
+
+  .Right {
+    animation: bannermoveR 30s linear infinite;
+  }
+  
+  .Slide {
+    width: 100%;
+  }
+
+  @keyframes bannermoveL {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes bannermoveR {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+/*///////////////////////////////// EDUCATION ///////////////////////////////////////*/
+
+#education {
+    background-color: black;
+    color: white;
+    height: auto;
+    padding-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#education h3 {
+    margin: 3% 0;
+    padding-top: 10px;
+    color: white;
+}
+
+#education h4 {
+    color: white;
+    font-size: 3em;
+    margin:0 10%;
+}
+
+.school{                                 
+    display: flex;
+    margin: 20px 20px 20px 5%;
+    border: transparent 0 solid;
+    border: 2px solid white;
+    width: 90%;
+    justify-items: center;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+} 
+
+#imageNizna {
+    background-image: url(/images/Nizna_school.jpg);
+    background-size: cover;
+    width: 50%;
+}
+
+#imageGMH {
+    background-image: url(/images/GMH.jpg);
+    background-size: cover;
+    width: 50%;
+}
+
+
+.school:hover{
+    box-shadow: 0 0 20px 0 white;
+}
+
+.school > div{                               
+    text-align: center;
+}
+
+.school .text {
+    padding: 2em;
+    display: inline-block;
+    text-align: center;
+    justify-content: right;
+    width: 50%;
+}
+
+/*///////////////////////////////// HOBBIES /////////////////////////////////////////*/
+
+#hobby {
+    height: 320vh;
+}
+
+.hobby_section {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.hobby_section .img_info {
+    background-size: cover;
+    color: #ccc9c7;
+    display: flex;
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+        Tahoma, sans-serif;
+    font-size: 17px;
+    height: 80vh;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 500ms ease-in;
+    width: 80%;
+}
+
+.img_info.appear {
+    opacity: 1;
+    transform: none;
+    transition: 1000ms ease-in-out;
+}
+
+.img_info.coding {
+    background-image: url("images/Person-Coding-On-Computer.jpg");
+}
+
+.img_info.acting {
+    background-image: url("images/hrad_photo.jpg");
+}
+
+.img_info.floorball {
+    background-image: url("images/IWIktkqTURBXy8yNWMzZTg0N2MyZmI2NDg0YzU5ZGUwNjRiYTk1Njk4NC5qcGVnkpUDAC3NBaDNAyqVAs0H0ADCww.jpg");
+    
+}
+
+.shadow_overlay {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.7)
+    );
+    opacity: 0;
+    transition: 300ms ease-in;
+}
+
+.shadow_overlay.appear {
+    opacity: 1;
+    transition: 2500ms ease-out;
+    transition-delay: 700ms;
+}
+
+.img_info .text {
+    display: flex;
+    flex-direction: column;
+    margin: 10% 5% 10% auto;
+    opacity: 0;
+    text-shadow: -0.9px 2px 7.6px rgba(0, 0, 0, 0.5);
+    transform: translateX(-5%);
+    transition: 500ms ease-in;
+    width: 65%;
+}
+
+.img_info .text.appear {
+    opacity: 1;
+    transform: none;
+    transition: 300ms ease-out;
+    transition-delay: 2s; 
+}
+
+.img_info .text h4 {
+    font-weight: bolder;
+    font-size: 3em;
+    margin: 0 0 0 auto;
+}
+
+.img_info .text p {
+    line-height: 1.8em;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+/*//////////////////////////////////// FOOTER //////////////////////////////////////////*/
+
+footer {
+    height: auto;
+    color: white;
+    background-color: black;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}
+
+#social{  
+    color: white;                          
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 50px;
+}
+
+#social a {
+    margin: 3% 2% 0 0;
+    color: white;
+    padding: 0.6%;
+    transition: transform 500ms,
+                border-radius 800ms,
+                color 200ms,
+                background-color 200ms;
+
+}
+
+#social a:hover,
+#social a:focus
+{
+	background-color: white;
+	color: black;
+    border-radius: 28px;
+}
+
+#contacts {
+    color: white;                          
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 30px;
+    margin: 2% 0;
+}
+
+.fas{
+    margin:0 20px;
+}
+
+#contacts p a {
+    color: white;
+}
+
+#contacts a:hover,
+#contacts a:focus
+{
+	background-color: white;
+	color: black;
+}
+
+/*//////////////////////////// FIXING FOR ALL DEVICES //////////////////////////*/
+
+@media screen and (max-width: 1075px) {
+    h2 {
+        padding: 0 0 0 40%;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    header {
+        background-position-x: -100px;
+    }
+
+    h2 {
+        padding: 0 0 0 30%;
+    }
+
+    .navList {
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    #info p {
+        font-size: 18px;
+    }
+
+    .hobby_section .img_info {
+        font-size: 20px;
+    }
+
+    #info p {
+        max-width: 40%;
+    }
+
+    .story img {
+        max-width: 40%;
+    }
+
+    #info img {
+        width: 200px;
+        height: auto;
+    }
+
+    .gallery {
+        width: 400%;
+      }
+
+    .img_info.acting {
+        background-position-x: -180px;
+    }
+
+    footer {
+        font-size: 15px;
+    }
+
+}
+@media screen and (max-width: 805px) {
+
+    h1 {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    h2 {
+        display: flex;
+        padding: 0;
+        font-size: 25px;
+        justify-content: center;
+    }
+
+    .school {
+        flex-direction: column;
+    }
+
+    #imageNizna {
+        width: auto;
+        height: 300px;
+    }
+    
+    #imageGMH {
+        width: auto;
+        height: 300px;
+    }
+
+    .school .text {
+        width: auto;
+    }
+
+    .gallery {
+        width: 500%;
+      }
+
+      .hobby_section .img_info {
+        width: auto;
+    }
+
+}
+@media screen and (max-width: 700px) {
+    h2 {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .gallery {
+        width: 550%;
+      } 
+
+      .img_info.acting {
+          background-position-x: -100px;
+      }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navList {
+        font-size: 18px;
+    }
+
+    header {
+        background-position-y: 100px;
+    }
+
+    #info p {
+        max-width: 40%;
+    }
+
+    .story img {
+        max-width: 40%;
+    }
+
+    #info img {
+        width: 200px;
+        height: auto;
+    }
+
+    .gallery {
+        width: 600%;
+      }
+
+      footer {
+        font-size: 10px;
+    }
+
+      #contacts {
+          flex-direction: column;
+      }
+
+      .img_info .text {
+        width: auto;
+    }
+
+    #contacts {
+        font-size: 15px;
+    }
+
+    #social {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .gallery {
+        width: 660%;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        background-position-x:-120px;
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h1 span {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 8px;
+    }
+
+    h5 {
+        font-size: 35px;
+        margin: 20px 0;
+    }
+
+    #quotes {
+        font-size: 25px;
+    }
+
+    .gallery {
+        width: 750%;
+    } 
+
+    #info p {
+        font-size: 15px;
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .hobby_section .img_info {
+        font-size: 15px;
+    }
+
+    .img_info.acting {
+        background-position-x: -160px;
+    }
+
+    .story {
+        flex-direction: column;
+    }
+
+    .story img {
+        min-width: 60%;
+        margin: 20px 0;
+    }
+
+    .navList {
+        font-size: 15px;
+        max-width: 100vw;
+    }
+
+    .navList li > a {
+        padding: 16px 5px;
+    }
+    
+    #edu {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .gallery {
+        width: 850%;
+    } 
+}
