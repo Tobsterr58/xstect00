@@ -1,11 +1,19 @@
+/*
+Tobiáš Štec xstect00
+project for ITW 2022
+cant be copirighted
+its unique site about myself which contain a lot of informations about me
+in Brno 20.4.2022
+*/
 *{                                             
-        text-decoration:none;
+    text-decoration:none;
 }
 
 html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/*declaring downloaded fonts that i am using on the site */
 @font-face {
     font-family: justFont;
     src: url(fonts/Rock_Salt/RockSalt-Regular.ttf);
@@ -15,14 +23,14 @@ html {
     font-family: quotesFont;
     src: url(fonts/barcelony/Barcelony.ttf);
   }
-body{ /* addapted to samsung galaxy A50 (My phone) smaller can not work properly*/
+body{ /* addapted to samsung galaxy A50 (My phone) smaller should not work properly */
     min-width: 375px;
     max-width: none;
     margin: auto;
     min-height: 650px;
 }
 
-header{
+header{ /*all informations for header and giving it a nice background of me*/
     width: 100%;
     height: 110vh;
     min-height: 300px;
@@ -39,7 +47,7 @@ h1 {
     font-family: Georgia, Times, "Times New Roman", serif;
 }
 
-h1 span {
+h1 span { /*using hand writing font for my surname*/
     padding-left: 20px;
     font-family: justFont, Georgia, Times, "Times New Roman", serif;
     font-size: 80px;
@@ -73,13 +81,13 @@ h3 {
     background-color: #ECEBEA;
     width: 100%;
 	list-style: none;
-    position: fixed;
+    position: fixed; /* to always show navbar */
 	display: flex;
 	flex: 1;
 	justify-content: flex-end;
 	padding: 0;
 	margin: 0;
-    box-shadow: 0 0 10px 0 black;
+    box-shadow: 0 0 10px 0 black; /* to be more visible on white areas */
 }
 
 .navList li{
@@ -98,7 +106,7 @@ h3 {
 	display: flex;
 	height: 100%;
 	padding: 0.8em 1.2em;
-	transition: border-color 150ms cubic-bezier(0.440, 0.090, 0.580, 0.935);
+	transition: border-color 150ms cubic-bezier(0.440, 0.090, 0.580, 0.935); /*animation for borders on nav bar */
 }
 
 .navList li:hover > a{
@@ -112,8 +120,6 @@ h5 {
     margin: 2% 0;
     text-align: center;
 }
-
-
 
 #info img {
     display: block;
@@ -176,13 +182,13 @@ h5 {
     width: 100%;
 }
 
-.gallery {
+.gallery {  /*animation of pictures to moving to left */
     display: flex;
     width: 200%;
-    animation: bannermoveL 30s linear infinite;
+    animation: bannermoveL 30s linear infinite; 
   }
 
-  .Right {
+  .Right { /*animation of pictures to moving to right */
     animation: bannermoveR 30s linear infinite;
   }
   
@@ -190,7 +196,7 @@ h5 {
     width: 100%;
   }
 
-  @keyframes bannermoveL {
+  @keyframes bannermoveL { /*css animation to "scroll" pictures from 0% x position to -50*/
     0% {
       transform: translateX(0);
     }
@@ -199,7 +205,7 @@ h5 {
     }
   }
 
-  @keyframes bannermoveR {
+  @keyframes bannermoveR { /*css animation to "scroll" pictures from -50% x position to 0*/
     0% {
       transform: translateX(-50%);
     }
@@ -253,7 +259,7 @@ h5 {
 }
 
 
-.school:hover{
+.school:hover{ /*to make a shadow while hoovering the element */
     box-shadow: 0 0 20px 0 white;
 }
 
@@ -292,15 +298,15 @@ h5 {
     font-size: 17px;
     height: 80vh;
     opacity: 0;
-    transform: translateY(40px);
-    transition: 500ms ease-in;
+    transform: translateY(40px); /* image will come and change his Y position */
+    transition: 500ms ease-in;   /*image will pop up on site after 500ms using ease-in animation*/
     width: 80%;
 }
 
 .img_info.appear {
     opacity: 1;
     transform: none;
-    transition: 1000ms ease-in-out;
+    transition: 1000ms ease-in-out; /*text animation to appear after 1sec*/
 }
 
 .img_info.coding {
@@ -317,7 +323,7 @@ h5 {
 }
 
 .shadow_overlay {
-    background-image: linear-gradient(
+    background-image: linear-gradient( /*adding gradient on pictures after 300ms to prepare image for text*/
         to right,
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.7)
@@ -326,7 +332,7 @@ h5 {
     transition: 300ms ease-in;
 }
 
-.shadow_overlay.appear {
+.shadow_overlay.appear { /*all time for whole overlay to appear*/
     opacity: 1;
     transition: 2500ms ease-out;
     transition-delay: 700ms;
@@ -348,6 +354,11 @@ h5 {
     transform: none;
     transition: 300ms ease-out;
     transition-delay: 2s; 
+}
+
+.img_info .text a {
+    color: #ccc9c7;
+    display: flex;
 }
 
 .img_info .text h4 {
@@ -391,7 +402,7 @@ footer a {
     margin: 3% 2% 0 0;
     color: white;
     padding: 0.6%;
-    transition: transform 500ms,
+    transition: transform 500ms,   /*using transition to change properties of element after hovering or focusing to values below */
                 border-radius 800ms,
                 color 200ms,
                 background-color 200ms;
@@ -432,10 +443,30 @@ footer a {
 
 /*//////////////////////////// FIXING FOR ALL DEVICES //////////////////////////*/
 
+/*
+    i use @media and screen which I used in HTML to change wite on max with values
+    its same thing so i will not comment each one
+*/
+
 @media screen and (max-width: 1075px) {
     h2 {
         padding: 0 0 0 40%;
     }
+
+    #info img {
+        width: 200px;
+        height: auto;
+    }
+
+    .gallery {
+        width: 345%; /* changing values of gallery images to change properly on different screen resolutiones */
+      }
+}
+
+@media screen and (max-width: 950px) {
+    .gallery {
+        width: 380%; 
+      }
 }
 
 @media screen and (max-width: 875px) {
@@ -466,11 +497,6 @@ footer a {
 
     .story img {
         max-width: 40%;
-    }
-
-    #info img {
-        width: 200px;
-        height: auto;
     }
 
     .gallery {
@@ -672,6 +698,14 @@ footer a {
         font-size: 60px;
     }
 }
+
+@media screen and (max-width: 450px) {
+
+    .gallery {
+        width: 800%;
+    } 
+}
+
 
 @media screen and (max-width: 400px) {
 
